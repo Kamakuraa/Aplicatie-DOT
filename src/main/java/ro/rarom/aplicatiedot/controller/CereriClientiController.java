@@ -2,24 +2,24 @@ package ro.rarom.aplicatiedot.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ro.rarom.aplicatiedot.entity.OmologariEntity;
-import ro.rarom.aplicatiedot.service.OmologariService;
+import ro.rarom.aplicatiedot.model.CereriClientiEntity;
+import ro.rarom.aplicatiedot.service.CereriClientiService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("omologs")
+@RequestMapping("cereri")
 @RequiredArgsConstructor
-public class OmologariController {
+public class CereriClientiController {
 
-  private final OmologariService service;
+  private final CereriClientiService service;
 
   @GetMapping
-  List<OmologariEntity> getAll(){
+  List<CereriClientiEntity> getAll(){
     return service.getAll();
   }
   @PostMapping
-  OmologariEntity addOmologs(@RequestBody OmologariEntity omologari){
-    return service.addOmologs(omologari);
+  CereriClientiEntity addOmologs(@RequestBody CereriClientiEntity omologari){
+    return service.addCerere(omologari);
   }
 }

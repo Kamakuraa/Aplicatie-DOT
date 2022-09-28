@@ -2,22 +2,22 @@ package ro.rarom.aplicatiedot.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ro.rarom.aplicatiedot.entity.OmologariEntity;
-import ro.rarom.aplicatiedot.repository.OmologariRepository;
+import ro.rarom.aplicatiedot.model.CereriClientiEntity;
+import ro.rarom.aplicatiedot.repository.CereriClientiRepository;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class OmologariService {
+public class CereriClientiService {
 
-  private final OmologariRepository repository;
+  private final CereriClientiRepository repository;
 
-  public List<OmologariEntity> getAll() {
+  public List<CereriClientiEntity> getAll() {
     return repository.findAll ();
   }
 
-  public OmologariEntity addOmologs(OmologariEntity omologari) {
-    return repository.save (omologari);
+  public CereriClientiEntity addCerere(CereriClientiEntity cerere) {
+    return repository.save (cerere);
   }
 }

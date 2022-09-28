@@ -1,32 +1,35 @@
-package ro.rarom.aplicatiedot.entity;
+package ro.rarom.aplicatiedot.model;
 
 import lombok.*;
+import ro.rarom.aplicatiedot.model.enums.MetodaPlata;
+import ro.rarom.aplicatiedot.model.enums.StareCerere;
+import ro.rarom.aplicatiedot.model.enums.TipCerere;
+import ro.rarom.aplicatiedot.model.enums.TipCompletare;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table(name = "dot_cereri_clienti")
-@Data
+@Getter
+@Setter
 @Builder
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class OmologariEntity {
+public class CereriClientiEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+  private Long id;
 
   private int beneficiarId;
-
   private String certificatExtindere;
 
   private int solicitareIncercari;
 
-  private String tipOmologari;
+  private String tipOmologare;
 
-  private String metodaPlata;
+  private MetodaPlata metodaPlata;
 
   private StareCerere stareCerere;
 
@@ -34,7 +37,7 @@ public class OmologariEntity {
 
   private LocalDateTime dataCerere;
 
-  private int tipCerere;
+  private TipCerere tipCerere;
 
   private int repartizare;
 
@@ -52,21 +55,20 @@ public class OmologariEntity {
 
   private int solicitareCertificat;
 
-  private int nrInregistrare;
-
-  private String wvta;
+  private Long nrInregistrare;
 
   private int wvtaId;
 
-  private TipComplementare tipCompletare;
+  private TipCompletare tipCompletare;
 
   private int serviciutehnicId;
 
   private int customerId;
 
-  public OmologariEntity(String certificatExtindere, int solicitareIncercari) {
+  public CereriClientiEntity(String certificatExtindere, int solicitareIncercari) {
     this.certificatExtindere = certificatExtindere;
     this.solicitareIncercari = solicitareIncercari;
   }
+
 
 }
