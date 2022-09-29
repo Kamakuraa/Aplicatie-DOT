@@ -55,7 +55,7 @@ public class CereriClientiEntity {
 
   private int solicitareCertificat;
 
-  private Long nrInregistrare;
+  private long nrInregistrare;
 
   private int wvtaId;
 

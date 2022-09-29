@@ -2,7 +2,9 @@ package ro.rarom.aplicatiedot.data;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
-import ro.rarom.aplicatiedot.entity.CereriClientiEntity;
+
+import org.springframework.stereotype.Component;
+import ro.rarom.aplicatiedot.model.CereriClientiEntity;
 import ro.rarom.aplicatiedot.repository.CereriClientiRepository;
 
 import java.util.List;
